@@ -1,15 +1,13 @@
-const { sumaHasta } = require('./sumaHasta');
+const { contarPares } = require('./contarPares');
 
-describe('sumaHasta', ()=>{
-    test('Happy path:numero 5 suma es  ', () => {
-        expect(sumaHasta(5)).toBe(15);
+describe('contarPares', ()=>{
+    test('Happy path:[1,2,3,4,6] 3 ', () => {
+        expect(contarPares([1,2,3,4,6])).toBe(3);
     });
-    test('Happy path: numero 1 suma es ', () => {
-        expect(sumaHasta(1)).toBe(1);
+    test('Happy path: [] es 0', () => {
+        expect(contarPares([])).toBe(0);
     });
     test('Sad path: numero inválido', () => {
-        expect(()=>sumaHasta(-1)).toThrow('numero inválido'); 
-        expect(()=>sumaHasta('10')).toThrow('numero inválido'); 
-        expect(()=>sumaHasta(2.5)).toThrow('numero inválido'); 
+        expect(()=>contarPares('no array')).toThrow('arreglo inválido'); 
     }); 
 });

@@ -5,7 +5,7 @@ describe('sumaHasta', ()=>{
         expect(sumaHasta(5)).toBe(15); 
     });
     test('Happy path: numero 1 suma es ', () => {
-        expect(sumaHasta(7)).toBe(false); 
+        expect(sumaHasta(1)).toBe(1); 
     });
     test('Sad path: numero inválido', () => {
         expect(()=>sumaHasta(0)).toThrow('numero inválido'); 
