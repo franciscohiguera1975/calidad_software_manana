@@ -1,5 +1,5 @@
 function crearEstudiante(nombre, edad){
-    if(!typeof nombre!='string' || !nombre.trim()){
+    if(!typeof nombre=='string' || !nombre.trim()){
         throw new TypeError("nombre inválido");
     }   
     if(!Number.isInteger(edad) || edad<0){
